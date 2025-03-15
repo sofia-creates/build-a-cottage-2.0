@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import Quizlet from "./components/Quizlet";
+import CottagePhoto from './components/CottagePhoto';
 
 
 import './App.css'
 
 function App() {
-  const [level, setLevel] = useState(0)
+  const [level, setLevel] = useState(1)
 
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
       <button onClick={() => setLevel((level) => level + 1)}>
         Level is {level}
       </button>
+      {/* <CottagePhoto/> */}
       <Quizlet level={level} setLevel={setLevel} />
     </>
   )
