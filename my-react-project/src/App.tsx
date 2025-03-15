@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import Quizlet from "./components/Quizlet.jsx"
+import Quizlet from "./components/Quizlet";
+
+
 import './App.css'
 
 function App() {
