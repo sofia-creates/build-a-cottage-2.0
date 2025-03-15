@@ -1,5 +1,6 @@
 import questionArray from "../data/questions";
 import { useEffect } from "react";
+import { Question } from "../interfaces/question";
 
 const Quizlet = ({ level, setLevel }) => {
   let currentQuestion;
@@ -10,7 +11,7 @@ const Quizlet = ({ level, setLevel }) => {
     //console.log(questionArray);
 
     //pick question
-    function getRandomQuestion(questionArray) {
+    function getRandomQuestion(questionArray: Question[]) {
       //console.log(questionArray);
       // Generate a random index based on the array's length
       const randomIndex = Math.floor(Math.random() * questionArray.length);
