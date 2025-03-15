@@ -25,7 +25,7 @@ const questionArray = [
         answerOptions: [
           { text: "Have a snuggle, and then leave", correctAnswer: false },
           { text: "Cool, free bear cub!!", correctAnswer: false },
-          { text: "Do not touch the cub and walk away asap", correctAnswer: true },
+          { text: "Do not touch the cub and walk away ASAP", correctAnswer: true },
         ],
       },
       {

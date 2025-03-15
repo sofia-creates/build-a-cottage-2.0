@@ -6,13 +6,13 @@ import { QuizletProps } from "../interfaces/quizletProps";
 
 
 const Quizlet = ({ level, setLevel }: QuizletProps) => {
-  let [selectedAnswer, setSelectedAnswer] = useState<boolean | null>(null);
-
   let defaultQuestion = {question: "Are you ready to start?", answerOptions: [
     {text: "Yes!", correctAnswer: true},
     {text: "Hell yes!", correctAnswer: true}
   ]}
-  let currentQuestion = defaultQuestion;
+
+  let [selectedAnswer, setSelectedAnswer] = useState<boolean | null>(null);
+  let  [currentQuestion, setCurrentQuestion] = useState<Question>(defaultQuestion);
 
   //when level is changed, pick a question and render it
   useEffect(() => {
@@ -27,11 +27,15 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
       // Return the element at that index
       currentQuestion = questionArray[randomIndex];
       console.log("current question is: ", currentQuestion);
+      return currentQuestion;
     }
 
-    getRandomQuestion(questionArray);
+    setCurrentQuestion(getRandomQuestion(questionArray));
+    
 
-    //render question
+    //render the new question
+
+
   }, [level]);
 
   let handleLevelUp = () => {
@@ -40,12 +44,14 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
 
   let submitAnswer = () => {
     //check selectedAnswer state
+    console.log(`selectedAnswer is: ${selectedAnswer}`)
 
-    if (selectedAnswer = true) {
-
+    if (selectedAnswer == true) {
+      handleLevelUp();
+    } else {
+      console.log("wrong answer")
+      alert("wrong answer you idiot")
     }
-
-    //if selectedAnswer = false then run handlelevelup
   }
 
 
@@ -57,7 +63,8 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
         <input type="radio" name="question" id="" />
         </form> */}
 
-      <div>
+      <div id="formContainer">
+      <p id="question">{currentQuestion.question}</p>
         {currentQuestion.answerOptions.map((option, index) => (
           <div key={index}>
             <label htmlFor={`answer${index}`}>{option.text}</label>
