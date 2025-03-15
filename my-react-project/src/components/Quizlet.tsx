@@ -48,10 +48,14 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
 
     if (selectedAnswer == true) {
       handleLevelUp();
+      //make it so that no radiobutton is selected automatically
     } else {
       console.log("wrong answer")
       alert("wrong answer you idiot")
     }
+
+    //OBS PROBLEM HÄR
+    //om man inte har gjort ett aktivt val och klickar på submit på det förinställda valet så går man vidare till nästa nivå oavsett om det var rätt. det pga selectedANswer har inte ändrats!! sätt så att ingen radioknapp är autovald.
   }
 
 
