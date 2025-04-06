@@ -3,7 +3,7 @@ import styles from "./cottagePhoto.module.scss"
 
 const CottagePhoto = () => {
   return (
-        <img  className={styles.cottagePhotoContainer} src={imagePath} alt="Your cottage!" /> 
+        <img  className={styles.cottagePhoto} src={imagePath} alt="Your cottage!" /> 
   )
 }
 

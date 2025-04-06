@@ -83,7 +83,6 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
         ))}
         <button onClick={submitAnswer}>Submit answer</button>
       </div>
-
     </div>
   );
 };
