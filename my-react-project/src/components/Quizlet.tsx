@@ -57,7 +57,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
     } else {
       console.log("wrong answer")
       alert("wrong answer you idiot")
-      setCurrentQuestion(getRandomQuestion(questionArray));
+      handleTheIdiotFailed();
     }
 
     //OBS PROBLEM HÄR

@@ -15,7 +15,7 @@ function App() {
       <button onClick={() => setLevel((level) => level + 1)}>
         Level is {level}
       </button>
-      {/* <CottagePhoto/> */}
+      <CottagePhoto/>
       <Quizlet level={level} setLevel={setLevel} />
     </>
   )
