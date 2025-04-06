@@ -13,34 +13,39 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
 
   let [selectedAnswer, setSelectedAnswer] = useState<boolean | null>(null);
   let  [currentQuestion, setCurrentQuestion] = useState<Question>(defaultQuestion);
+  
+  //pick question
+  function getRandomQuestion(questionArray: Question[]) {
+    // console.log(questionArray);
+    // Generate a random index based on the array's length
+    const randomIndex = Math.floor(Math.random() * questionArray.length);
+    // Return the element at that index
+    currentQuestion = questionArray[randomIndex];
+    console.log("current question is: ", currentQuestion);
+    return currentQuestion;
+  }
 
   //when level is changed, pick a question and render it
   useEffect(() => {
     console.log("level is: ", { level });
     //console.log(questionArray);
 
-    //pick question
-    function getRandomQuestion(questionArray: Question[]) {
-      // console.log(questionArray);
-      // Generate a random index based on the array's length
-      const randomIndex = Math.floor(Math.random() * questionArray.length);
-      // Return the element at that index
-      currentQuestion = questionArray[randomIndex];
-      console.log("current question is: ", currentQuestion);
-      return currentQuestion;
-    }
-
     setCurrentQuestion(getRandomQuestion(questionArray));
     
-
     //render the new question
 
 
   }, [level]);
 
+  //if player gets the question right
   let handleLevelUp = () => {
     setLevel((prevLevel) => prevLevel + 1);
   };
+
+  //if player gets question wrong
+  let handleTheIdiotFailed = () => {
+    setCurrentQuestion(getRandomQuestion(questionArray));
+  }
 
   let submitAnswer = () => {
     //check selectedAnswer state
@@ -52,6 +57,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
     } else {
       console.log("wrong answer")
       alert("wrong answer you idiot")
+      setCurrentQuestion(getRandomQuestion(questionArray));
     }
 
     //OBS PROBLEM HÄR
