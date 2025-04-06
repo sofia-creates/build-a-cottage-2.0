@@ -35,6 +35,22 @@ const questionArray = [
           { text: "False", correctAnswer: false },
         ],
       },
+      {
+        question: "You find a stream in the woods. Which is a clue that the water might be drinkable?",
+        answerOptions: [
+          { text: "The stream is clear and runs fast over rocks", correctAnswer: true },
+          { text: "The stream is stagnant and runs slowly", correctAnswer: false },
+          { text: "A strong, metallic taste", correctAnswer: false },
+        ],
+      },
+      {
+        question: "Moss only growing on a certain side of trees can mean...",
+        answerOptions: [
+          { text: "The wind often blows from the other direction", correctAnswer: true },
+          { text: "That side of the tree is northward", correctAnswer: true },
+          { text: "It's Carlinen-moss, which simply grows like that", correctAnswer: false },
+        ],
+      },
 
 ]
 
