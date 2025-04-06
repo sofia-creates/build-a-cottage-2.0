@@ -10,13 +10,14 @@ function App() {
 
   return (
     <>
-      <h1>Let's build a cottage</h1> 
-      <h2>Level {level}</h2>
-      <button onClick={() => setLevel((level) => level + 1)}>
-        Level is {level}
-      </button>
+    <div className="pageWrapper">
       <CottagePhoto/>
-      <Quizlet level={level} setLevel={setLevel} />
+      <div id="headingsAndQuiz">
+        <h1>Let's build a cottage</h1> 
+        <h2>Level {level}</h2>
+        <Quizlet level={level} setLevel={setLevel} />
+      </div>
+    </div>
     </>
   )
 }

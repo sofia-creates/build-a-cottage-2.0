@@ -55,7 +55,6 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
       handleLevelUp();
       //make it so that no radiobutton is selected automatically
     } else {
-      console.log("wrong answer")
       alert("wrong answer you idiot")
       handleTheIdiotFailed();
     }
@@ -85,7 +84,6 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
         <button onClick={submitAnswer}>Submit answer</button>
       </div>
 
-      <button onClick={handleLevelUp}>Level up</button>
     </div>
   );
 };

@@ -1,14 +1,16 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
+  // padding: 2rem;
 }
 
 .pageWrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
+  #headingsAndQuiz {
+    display: flex;
+    flex-direction: column;
+  }
 }
-.pageWrapper #headingsAndQuiz {
-  display: flex;
-  flex-direction: column;
-}/*# sourceMappingURL=App.css.map */
