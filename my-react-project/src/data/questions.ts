@@ -77,6 +77,58 @@ const questionArray = [
           { text: "It provides shade so the walls don’t warp", correctAnswer: false },
         ],
       },
+      {
+        question: "If you have your own well of drinkable water, which of the following could risk contaminating that water?",
+        answerOptions: [
+          { text: "A bathroom outhouse", correctAnswer: false },
+          { text: "A laundry machine - laundry detergent could leak out into the soil", correctAnswer: true },
+          { text: "Using manure in the garden flowerbeds", correctAnswer: false },
+          { text: "A car that runs on etanol", correctAnswer: false },
+        ],
+      },
+      {
+        question: "True or false: you should grow the crops in your garden in the same spots every year.",
+        answerOptions: [
+          { text: "True", correctAnswer: false },
+          { text: "False", correctAnswer: true },
+        ],
+      }, 
+      {
+        question: "True or false: Moose are carnivorous",
+        answerOptions: [
+          { text: "True", correctAnswer: false },
+          { text: "False", correctAnswer: true },
+        ],
+      }, 
+      {
+        question: "Where is the most likely place to find chanterelles?",
+        answerOptions: [
+          { text: "An evergreen forest", correctAnswer: true },
+          { text: "A leafy forest", correctAnswer: false },
+        ],
+      }, 
+      {
+        question: "Where is the most likely place to find chanterelles?",
+        answerOptions: [
+          { text: "An evergreen forest", correctAnswer: true },
+          { text: "A leafy forest", correctAnswer: false },
+        ],
+      },
+      {
+        question: "What is the one snake in Sweden who's bite could potentially kill you?",
+        answerOptions: [
+          { text: "European viper / Huggorm", correctAnswer: true },
+          { text: "Grass Snake / Snok", correctAnswer: false },
+          { text: "Common slow worm / Kopparorm/kopparödla", correctAnswer: false },
+        ],
+      },
+      {
+        question: "True or false: In Sweden, doubleglazed windows are essential to make a house insulated enough to live in during the cold winters",
+        answerOptions: [
+          { text: "True", correctAnswer: true },
+          { text: "False", correctAnswer: false },
+        ],
+      }, 
 
 
 ]
