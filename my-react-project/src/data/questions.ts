@@ -129,6 +129,13 @@ const questionArray = [
           { text: "False", correctAnswer: false },
         ],
       }, 
+      {
+        question: "True or false: You can safely eat all red berries in a swedish forest",
+        answerOptions: [
+          { text: "True", correctAnswer: false },
+          { text: "False", correctAnswer: true },
+        ],
+      },
 
 
 ]

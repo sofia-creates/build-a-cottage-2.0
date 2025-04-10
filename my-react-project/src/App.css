@@ -6,9 +6,11 @@
 .pageWrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 4vw;
 }
 .pageWrapper #headingsAndQuiz {
   display: flex;
   flex-direction: column;
+  padding-left: 3%;
 }/*# sourceMappingURL=App.css.map */
