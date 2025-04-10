@@ -48,9 +48,36 @@ const questionArray = [
         answerOptions: [
           { text: "The wind often blows from the other direction", correctAnswer: true },
           { text: "That side of the tree is northward", correctAnswer: true },
-          { text: "It's Carlinen-moss, which simply grows like that", correctAnswer: false },
+          { text: "It's Carlinian-moss, which simply grows like that", correctAnswer: false },
         ],
       },
+      {
+        question: "You’re starting your cottage build on uneven forest ground. What’s the best first step?",
+        answerOptions: [
+          { text: "Start cutting wood for the walls", correctAnswer: false },
+          { text: "Dig a trench for plumbing", correctAnswer: false },
+          { text: "Level the ground and lay a solid foundation", correctAnswer: true },
+          { text: "Build the roof first to protect from weather", correctAnswer: false },
+        ],
+      },{
+        question: "Which type of wood is best suited for building a durable hand-built cottage frame?",
+        answerOptions: [
+          { text: "Soft pine from young trees", correctAnswer: false },
+          { text: "Seasoned hardwood like oak or chestnut", correctAnswer: true },
+          { text: "Driftwood from a nearby lake", correctAnswer: false },
+          { text: "Bamboo — light and flexible", correctAnswer: false },
+        ],
+      },
+      {
+        question: "Why is it crucial to get the roof up as early as possible during a cottage build?",
+        answerOptions: [
+          { text: "It makes the structure look finished faster", correctAnswer: false },
+          { text: "It allows you to hang a chimney", correctAnswer: false },
+          { text: "It protects the interior and you from the weather", correctAnswer: true },
+          { text: "It provides shade so the walls don’t warp", correctAnswer: false },
+        ],
+      },
+
 
 ]
 

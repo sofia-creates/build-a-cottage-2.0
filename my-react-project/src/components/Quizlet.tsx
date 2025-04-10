@@ -32,9 +32,6 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
 
     setCurrentQuestion(getRandomQuestion(questionArray));
     
-    //render the new question
-
-
   }, [level]);
 
   //if player gets the question right
@@ -52,8 +49,10 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
     console.log(`selectedAnswer is: ${selectedAnswer}`)
 
     if (selectedAnswer == true) {
+      
       handleLevelUp();
       //make it so that no radiobutton is selected automatically
+
     } else {
       alert("wrong answer you idiot")
       handleTheIdiotFailed();
