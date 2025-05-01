@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     <div className="pageWrapper">
-      <CottagePhoto/>
+      <CottagePhoto level={level}/>
       <div id="headingsAndQuiz">
         <h1>Let's build a cottage</h1> 
         <h2>Level {level}</h2>
