@@ -5,7 +5,7 @@ const CottagePhoto = () => {
   //importera Level från app?
   //let currentImagePath = ../assets/cottagePhoto-{level}
   return (
-        <img  className={styles.cottagePhoto} src={imagePath} alt="Your cottage!" /> 
+        <img  className={styles.cottagePhoto} src={imagePath} alt="`Your cottage, level ${}`" /> 
   )
 }
 
