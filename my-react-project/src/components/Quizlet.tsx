@@ -3,6 +3,7 @@ import questionArray from "../data/questions";
 import { useEffect , useState } from "react";
 import { Question } from "../interfaces/question";
 import { QuizletProps } from "../interfaces/quizletProps";
+import FeedbackContainer from "./FeedbackContainer";
 
 
 const Quizlet = ({ level, setLevel }: QuizletProps) => {
@@ -37,7 +38,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
 
   //if player gets the question right
   let handleLevelUp = () => {
-    
+
     setLevel((prevLevel) => prevLevel + 1);
   };
 
@@ -85,6 +86,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
         <button onClick={submitAnswer}>Submit answer</button>
       </div>
       <div id="feedback-container"></div>
+      <FeedbackContainer rightOrWrong = {isAnswerCorrect} />
     </div>
   );
 };
