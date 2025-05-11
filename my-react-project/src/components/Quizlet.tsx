@@ -33,8 +33,11 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
     
   }, [level]);
 
+  let feedbackContainer = document.querySelector('#feedback-container');
+
   //if player gets the question right
   let handleLevelUp = () => {
+    
     setLevel((prevLevel) => prevLevel + 1);
   };
 
@@ -81,6 +84,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
         ))}
         <button onClick={submitAnswer}>Submit answer</button>
       </div>
+      <div id="feedback-container"></div>
     </div>
   );
 };
