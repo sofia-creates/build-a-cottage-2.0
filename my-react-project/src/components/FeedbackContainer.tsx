@@ -6,6 +6,7 @@ const FeedbackContainer = (isAnswerCorrect: true | false | null) => {
     let getFeedback = (isAnswerCorrect: true | false | null)=> {
         if (isAnswerCorrect) {
             feedback = "Correct! Well done";
+            console.log(feedback)
         } else if (!isAnswerCorrect) {
             feedback = "Sorry, wrong answer!"
         }
