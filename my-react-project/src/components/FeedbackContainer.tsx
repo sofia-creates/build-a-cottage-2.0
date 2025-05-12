@@ -1,12 +1,19 @@
-const FeedbackContainer = (rightOrWrong) => {
+import { useEffect } from "react";
+
+
+const FeedbackContainer = (isAnswerCorrect: true | false | null) => {
     let feedback = "";
-    let getFeedback = ()=> {
-        if (rightOrWrong == "rightAnswer") {
+    let getFeedback = (isAnswerCorrect: true | false | null)=> {
+        if (isAnswerCorrect) {
             feedback = "Correct! Well done";
-        } else if (rightOrWrong == "wrongAnswer") {
+        } else if (!isAnswerCorrect) {
             feedback = "Sorry, wrong answer!"
         }
     }
+    useEffect(()=> {
+      getFeedback(isAnswerCorrect)
+
+    }, [isAnswerCorrect])
 
   return (
     <div><p>{feedback}</p></div>

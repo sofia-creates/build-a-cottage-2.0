@@ -35,8 +35,9 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
   }, [level]);
 
   //variable to send on into component
-  type AnswerStatus = "wrongAnswer" | "rightAnswer";
-  // let isAnswerCorrect = ""  {AnswerStatus};
+  // type AnswerStatus = "wrongAnswer" | "rightAnswer";
+  // // let isAnswerCorrect = ""  {AnswerStatus};
+  let isAnswerCorrect = null;
 
   //if player gets the question right
   let handleLevelUp = () => {
@@ -54,11 +55,12 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
     console.log(`selectedAnswer is: ${selectedAnswer}`)
 
     if (selectedAnswer == true) {
-      
+      isAnswerCorrect = true;
       handleLevelUp();
       //make it so that no radiobutton is selected automatically
 
     } else {
+      isAnswerCorrect = false;
       alert("wrong answer you idiot")
       handleTheIdiotFailed();
     }
