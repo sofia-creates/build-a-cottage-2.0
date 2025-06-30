@@ -35,9 +35,9 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
   }, [level]);
 
   //variable to send on into component
-  type AnswerStatus = "wrongAnswer" | "rightAnswer" | null;
+  //type AnswerStatus = "wrongAnswer" | "rightAnswer" | null;
   // // let isAnswerCorrect = ""  {AnswerStatus};
-  let isAnswerCorrect = null;
+ let isAnswerCorrect: boolean | null = null;
 
   //if player gets the question right
   let handleLevelUp = () => {

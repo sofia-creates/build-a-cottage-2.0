@@ -3,6 +3,8 @@ import photo2 from "../assets/cottage_level_2.png"
 import photo3 from "../assets/cottage_level_3.png"
 import photo4 from "../assets/cottage_level_4.png"
 import photo5 from "../assets/cottage_level_5.png" 
+import photo6 from "../assets/cottage_level_6.png" 
+import photo7 from "../assets/cottage_level_7.png" 
 
 import styles from "./cottagePhoto.module.scss"
 
@@ -13,6 +15,8 @@ const imageMap: Record<number, string> = {
   3: photo3,
   4: photo4,
   5: photo5,
+  6: photo6,
+  7: photo7,
 };
 
 const CottagePhoto = ({ level }: { level: number }) => {
