@@ -5,12 +5,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background: #6A7E37;
+background: linear-gradient(115deg, rgba(106, 126, 55, 1) 0%, rgba(179, 188, 109, 1) 46%, rgba(75, 128, 6, 1) 97%);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -30,15 +27,20 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
+  margin-top: 3%;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background: #F6B746;
+  background: radial-gradient(circle, rgb(210, 154, 51) 5%, rgba(185, 118, 32, 1) 98%);
   cursor: pointer;
   transition: border-color 0.25s;
+  box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.23);
+  -moz-box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.23);
 }
 button:hover {
-  border-color: #646cff;
+  border-color: wheat;
 }
 button:focus,
 button:focus-visible {

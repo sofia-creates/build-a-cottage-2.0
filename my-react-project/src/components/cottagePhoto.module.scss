@@ -1,3 +1,8 @@
 .cottagePhoto{
     width: 50%;
+    border-radius: 8px;
+    border: solid 3px wheat;
+    box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.23);
+-webkit-box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.23);
+-moz-box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.23);
 }

@@ -61,8 +61,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
       //make it so that no radiobutton is selected automatically
 
     } else {
-      setIsAnswerCorrect(true);
-      alert("wrong answer you idiot")
+      setIsAnswerCorrect(false);
       handleTheIdiotFailed();
     }
 
