@@ -35,7 +35,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
   }, [level]);
 
   //variable to send on into component
-  // type AnswerStatus = "wrongAnswer" | "rightAnswer";
+  type AnswerStatus = "wrongAnswer" | "rightAnswer" | null;
   // // let isAnswerCorrect = ""  {AnswerStatus};
   let isAnswerCorrect = null;
 
