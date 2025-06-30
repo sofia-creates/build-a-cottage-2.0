@@ -1,4 +1,3 @@
-// import React from "react";
 import questionArray from "../data/questions";
 import { useEffect , useState } from "react";
 import { Question } from "../interfaces/question";
@@ -57,6 +56,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
 
     if (selectedAnswer == true) {
       setIsAnswerCorrect(true);
+
       handleLevelUp();
       //make it so that no radiobutton is selected automatically
 
@@ -83,7 +83,12 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
         {currentQuestion.answerOptions.map((option, index) => (
           <div key={index}>
             <label htmlFor={`answer${index}`}>{option.text}</label>
-            <input type="radio" name="question" id={`answer${index}`} onChange={() => setSelectedAnswer(option.correctAnswer)} 
+            <input 
+              type="radio" 
+              name="question" 
+              id={`answer${index}`} 
+              checked={selectedAnswer === option.correctAnswer}
+              onChange={() => setSelectedAnswer(option.correctAnswer)} 
             />
           </div>
         ))}
