@@ -34,11 +34,6 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
     
   }, [level]);
 
-  //variable to send on into component
-  //type AnswerStatus = "wrongAnswer" | "rightAnswer" | null;
-  // // let isAnswerCorrect = ""  {AnswerStatus};
- //let isAnswerCorrect: boolean | null = null;
-
   //if player gets the question right
   let handleLevelUp = () => {
 
@@ -65,8 +60,6 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
       handleTheIdiotFailed();
     }
 
-    //OBS PROBLEM HÄR
-    //om man inte har gjort ett aktivt val och klickar på submit på det förinställda valet så går man vidare till nästa nivå oavsett om det var rätt. det pga selectedANswer har inte ändrats!! sätt så att ingen radioknapp är autovald.
   }
 
 
