@@ -78,15 +78,6 @@ const questionArray = [
         ],
       },
       {
-        question: "If you have your own well of drinkable water, which of the following could risk contaminating that water?",
-        answerOptions: [
-          { text: "A bathroom outhouse", correctAnswer: false },
-          { text: "A laundry machine - laundry detergent could leak out into the soil", correctAnswer: true },
-          { text: "Using manure in the garden flowerbeds", correctAnswer: false },
-          { text: "A car that runs on etanol", correctAnswer: false },
-        ],
-      },
-      {
         question: "True or false: you should grow the crops in your garden in the same spots every year.",
         answerOptions: [
           { text: "True", correctAnswer: false },
