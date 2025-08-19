@@ -114,13 +114,6 @@ const questionArray = [
         ],
       },
       {
-        question: "True or false: In Sweden, doubleglazed windows are essential to make a house insulated enough to live in during the cold winters",
-        answerOptions: [
-          { text: "True", correctAnswer: true },
-          { text: "False", correctAnswer: false },
-        ],
-      }, 
-      {
         question: "True or false: You can safely eat all red berries in a swedish forest",
         answerOptions: [
           { text: "True", correctAnswer: false },

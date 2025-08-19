@@ -27,12 +27,10 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
 
   //when level is changed, pick a question and render it
   useEffect(() => {
-    console.log("level is: ", { level });
-    //console.log(questionArray);
-
+    //console.log("level is: ", { level });
     setCurrentQuestion(getRandomQuestion(questionArray));
-    
   }, [level]);
+
 
   //if player gets the question right
   let handleLevelUp = () => {
@@ -64,23 +62,32 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
 
   return (
     <div>
-      <div id="formContainer">
-      <p id="question">{currentQuestion.question}</p>
-        {currentQuestion.answerOptions.map((option, index) => (
-          <div key={index}>
-            <label htmlFor={`answer${index}`}>{option.text}</label>
-            <input 
-              type="radio" 
-              name="question" 
-              id={`answer${index}`} 
-              checked={selectedAnswer === option.correctAnswer}
-              onChange={() => setSelectedAnswer(option.correctAnswer)} 
-            />
-          </div>
-        ))}
-        <button onClick={submitAnswer}>Submit answer</button>
+
+      {level === 7 ? (
+      <div>
+        <h2>🎉 Congratulations, you won! 🎉</h2>
       </div>
-      <FeedbackContainer rightOrWrong = {isAnswerCorrect} />
+    ) : ( 
+      <>
+        <div id="formContainer">
+        <p id="question">{currentQuestion.question}</p>
+          {currentQuestion.answerOptions.map((option, index) => (
+            <div key={index}>
+              <label htmlFor={`answer${index}`}>{option.text}</label>
+              <input 
+                type="radio" 
+                name="question" 
+                id={`answer${index}`} 
+                checked={selectedAnswer === option.correctAnswer}
+                onChange={() => setSelectedAnswer(option.correctAnswer)} 
+              />
+            </div>
+          ))}
+          <button onClick={submitAnswer}>Submit answer</button>
+        </div>
+        <FeedbackContainer rightOrWrong = {isAnswerCorrect} />
+      </>
+    )}
     </div>
   );
 };
