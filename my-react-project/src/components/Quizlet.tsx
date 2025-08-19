@@ -65,7 +65,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
 
       {level === 7 ? (
       <div>
-        <h2>🎉 Congratulations, you won! 🎉</h2>
+        <h2>🎉 Well done, you won! 🎉</h2>
       </div>
     ) : ( 
       <>
@@ -73,7 +73,6 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
         <p id="question">{currentQuestion.question}</p>
           {currentQuestion.answerOptions.map((option, index) => (
             <div key={index}>
-              <label htmlFor={`answer${index}`}>{option.text}</label>
               <input 
                 type="radio" 
                 name="question" 
@@ -81,6 +80,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
                 checked={selectedAnswer === option.correctAnswer}
                 onChange={() => setSelectedAnswer(option.correctAnswer)} 
               />
+              <label htmlFor={`answer${index}`}>{option.text}</label>
             </div>
           ))}
           <button onClick={submitAnswer}>Submit answer</button>
