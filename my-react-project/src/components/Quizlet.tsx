@@ -31,10 +31,8 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
     setCurrentQuestion(getRandomQuestion(questionArray));
   }, [level]);
 
-
   //if player gets the question right
   let handleLevelUp = () => {
-
     setLevel((prevLevel) => prevLevel + 1);
   };
 
@@ -56,9 +54,7 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
       setIsAnswerCorrect(false);
       handleTheIdiotFailed();
     }
-
   }
-
 
   return (
     <div>

@@ -18,22 +18,9 @@ const FeedbackContainer = ({ rightOrWrong }: FeedbackContainerProps) => {
     }
   }, [rightOrWrong]);
 
-    // let feedback = "";
-    // let getFeedback = (rightOrWrong: true | false | null)=> {
-    //     if (rightOrWrong) {
-    //         feedback = "Correct! Well done";
-    //         console.log(feedback)
-    //     } else if (!rightOrWrong) {
-    //         feedback = "Sorry, wrong answer!"
-    //     }
-    // }
-    // useEffect(()=> {
-    //   getFeedback(rightOrWrong)
-
-    // }, [rightOrWrong])
 
   return (
-    <div><p>{feedback}</p></div>
+    <div><p><i>{feedback}</i></p></div>
   )
 }
 
