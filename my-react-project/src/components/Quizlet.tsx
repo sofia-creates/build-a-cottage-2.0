@@ -53,7 +53,6 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
       setIsAnswerCorrect(true);
 
       handleLevelUp();
-      //make it so that no radiobutton is selected automatically
 
     } else {
       setIsAnswerCorrect(false);
@@ -65,12 +64,6 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
 
   return (
     <div>
-      {/* <form action="">
-        <p id="question">{currentQuestion.question}</p>
-        <label htmlFor="">{currentQuestion.answerOptions[1].text}</label>
-        <input type="radio" name="question" id="" />
-        </form> */}
-
       <div id="formContainer">
       <p id="question">{currentQuestion.question}</p>
         {currentQuestion.answerOptions.map((option, index) => (
