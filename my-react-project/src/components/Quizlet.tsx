@@ -6,12 +6,12 @@ import FeedbackContainer from "./FeedbackContainer";
 
 
 const Quizlet = ({ level, setLevel }: QuizletProps) => {
-  let defaultQuestion = {question: "Are you ready to start?", answerOptions: [
+  const defaultQuestion = {question: "Are you ready to start?", answerOptions: [
     {text: "Yes!", correctAnswer: true},
     {text: "Hell yes!", correctAnswer: true}
   ]}
 
-  let [selectedAnswer, setSelectedAnswer] = useState<boolean | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<boolean | null>(null);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
   let  [currentQuestion, setCurrentQuestion] = useState<Question>(defaultQuestion);
   
@@ -32,16 +32,16 @@ const Quizlet = ({ level, setLevel }: QuizletProps) => {
   }, [level]);
 
   //if player gets the question right
-  let handleLevelUp = () => {
+  const handleLevelUp = () => {
     setLevel((prevLevel) => prevLevel + 1);
   };
 
   //if player gets question wrong
-  let handleTheIdiotFailed = () => {
+  const handleTheIdiotFailed = () => {
     setCurrentQuestion(getRandomQuestion(questionArray));
   }
 
-  let submitAnswer = () => {
+  const submitAnswer = () => {
     //check selectedAnswer state
     console.log(`selectedAnswer is: ${selectedAnswer}`)
 
