@@ -20,6 +20,7 @@
 /* Se till att CottagePhoto stannar i vänster kolumn */
 .pageWrapper > :first-child {
   grid-column: 1;
+  justify-self: center;
 }
 
 /* headingsAndQuiz hamnar automatiskt i kolumn 2 */
