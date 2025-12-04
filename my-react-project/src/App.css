@@ -1,16 +1,28 @@
+@charset "UTF-8";
 #root {
   max-width: 1280px;
   margin: 0 auto;
 }
 
 .pageWrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
   padding: 4vw;
 }
 .pageWrapper #headingsAndQuiz {
   display: flex;
   flex-direction: column;
   padding-left: 3%;
+}
+
+/* Se till att CottagePhoto stannar i vänster kolumn */
+.pageWrapper > :first-child {
+  grid-column: 1;
+}
+
+/* headingsAndQuiz hamnar automatiskt i kolumn 2 */
+#headingsAndQuiz {
+  grid-column: 2;
 }/*# sourceMappingURL=App.css.map */

@@ -20,7 +20,7 @@ const imageMap: Record<number, string> = {
 };
 
 const CottagePhoto = ({ level }: { level: number }) => {
-  let currentImagePath = imageMap[level]
+  const currentImagePath = imageMap[level]
   return (
         <img  className={styles.cottagePhoto} src={currentImagePath} alt={`Your cottage, level ${level}`} /> 
   )
