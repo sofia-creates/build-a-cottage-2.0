@@ -4,21 +4,15 @@
 }
 
 .pageWrapper {
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem; 
   align-items: start;
-
   padding:4vw;
 
   #headingsAndQuiz {
     display: flex;
     flex-direction: column;
-
     padding-left: 3%;
   }
 }
